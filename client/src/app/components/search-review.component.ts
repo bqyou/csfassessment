@@ -23,8 +23,8 @@ export class SearchReviewComponent implements OnInit{
   }
 
   noWhitespaceValidator(control: FormControl) {
-    const isWhitespace = (control.value || '').trim().length === 0;
-    const isValid = !isWhitespace;
+    const isLessThanTwo = (control.value || '').trim().length < 2;
+    const isValid = !isLessThanTwo;
     return isValid ? null : { 'whitespace': true };
 }
 
