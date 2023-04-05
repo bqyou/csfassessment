@@ -1,0 +1,11 @@
+table {
+    border-collapse:separate;
+    border:solid black 1px;
+    border-radius:6px;
+    width: 80%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+

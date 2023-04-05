@@ -1,0 +1,9 @@
+<h2>Post comment for {{title}}</h2><br>
+<form [formGroup]="form">
+Name: <input type="text" size = "30" formControlName="name"><br><br>
+Rating: <input type="number" min="1" max="5" step="1" formControlName="rating"><br><br>
+Comment: <br><br>
+<textarea rows="5" cols="50" formControlName="comment"></textarea><br>
+<button type="button" (click)="goBack()">Back</button>
+<button type="button" (click)="postComment()" [disabled]="isFormInvalid()">Post</button>
+</form>

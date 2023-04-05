@@ -1,0 +1,22 @@
+<button type="button" [routerLink]="['/']">Back</button>
+<br>
+<h1>Search Result</h1>
+<h2 *ngIf="noResult">Your search produces no result</h2>
+
+<table *ngFor="let i of movies" >
+    <tr >
+        <td style="width:300px; height:300px; text-align: center;">
+            <img [src]="i.image" style="max-height:200px;
+            max-width:200px;
+            height:auto;
+            width:auto;">
+        </td>
+        <td>
+            <h2><a [href]="i.review_url">{{i.title}} - {{i.rating}}</a></h2>
+            <h3>{{i.headline}}</h3><br>
+            {{i.summary}}<br><br>
+            Comments: {{i.commentcount}}<br><br>
+            <button type="button" (click)="addComment(i.title)">Comment</button>
+        </td>
+    </tr>
+</table>
